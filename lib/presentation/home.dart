@@ -26,6 +26,17 @@ class MyHomePage extends StatelessWidget {
           PageScreenTwo(
             title: "두번째 페이지",
           ),
+          // ListView(
+          //   children: [
+          //     for (var i = 0; i < 10000; i++) Text("string"),
+          //   ],
+          // ),
+          ListView.builder(
+            itemCount: 1000000,
+            itemBuilder: (BuildContext context, int index) {
+              return Text("string $index");
+            },
+          )
         ],
       ),
     );

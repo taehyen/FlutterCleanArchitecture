@@ -29,3 +29,26 @@ class UserRepositoryImpl implements UserRepository {
     return Future.value(Result.error("삭제 실패"));
   }
 }
+
+class MyClass {
+  final int count;
+
+  /// 기본 생성자
+  MyClass._(this.count);
+
+  /// factory named 생성자
+  factory MyClass.first() {
+    return MyClass._(1);
+  }
+
+  factory MyClass.sec() {
+    return MyClass._(2);
+  }
+
+  factory MyClass.third() {
+    return MyClass._(3);
+  }
+}
+
+var myClass = MyClass._(1);
+var myClassFist = MyClass.first();
